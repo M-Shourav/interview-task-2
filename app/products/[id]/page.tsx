@@ -1,5 +1,4 @@
 "use client";
-
 import Container from "@/components/Container";
 import FormattedPrice from "@/components/FormattedPrice";
 import Loading from "@/components/Loading";
