@@ -2,8 +2,8 @@
 import Container from "@/components/Container";
 import FormattedPrice from "@/components/FormattedPrice";
 import Loading from "@/components/Loading";
+import { getData } from "@/helper";
 import { ProductType } from "@/type";
-import axios from "axios";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
@@ -17,12 +17,10 @@ const SinglePage = () => {
     const fetchData = async () => {
       setIsLoading(true);
       try {
-        const response = await axios.get(
-          "https://glore-bd-backend-node-mongo.vercel.app/api/product"
-        );
-        if (response) {
-          setProducts(response?.data.data);
-        }
+        const endpoints =
+          "https://glore-bd-backend-node-mongo.vercel.app/api/product";
+        const product = await getData(endpoints);
+        setProducts(product?.data);
       } catch (error) {
         console.log("Data fetching error", error);
       } finally {
