@@ -28,7 +28,7 @@ const SinglePage = () => {
       }
     };
     fetchData();
-  }, [id]);
+  }, []);
 
   const productData = products?.find((item: ProductType) => item?._id == id);
 
