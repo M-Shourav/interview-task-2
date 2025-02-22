@@ -5,7 +5,6 @@ import FormattedPrice from "@/components/FormattedPrice";
 import Loading from "@/components/Loading";
 import { ProductType } from "@/type";
 import axios from "axios";
-import Image from "next/image";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
