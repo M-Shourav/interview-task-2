@@ -12,6 +12,7 @@ const SinglePage = () => {
   const [isLoading, setIsLoading] = useState(false);
   const params = useParams();
   const { id } = params;
+  console.log("id,", id);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -78,12 +79,6 @@ const SinglePage = () => {
                 {productData?.status ? " true" : "false"}
               </span>
             </p>
-            <button
-              className="bg-black/80 text-white px-4 py-2 rounded-md
-            hover:bg-black duration-300 transition-colors"
-            >
-              Add To Cart
-            </button>
           </div>
         </Container>
       )}
