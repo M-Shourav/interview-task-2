@@ -9,6 +9,15 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async rewrites() {
+    return [
+      {
+        source: "/api/product",
+        destination:
+          "https://glore-bd-backend-node-mongo.vercel.app/api/product",
+      },
+    ];
+  },
 };
 
 export default nextConfig;
