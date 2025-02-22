@@ -12,7 +12,6 @@ const SinglePage = () => {
   const [isLoading, setIsLoading] = useState(false);
   const params = useParams();
   const { id } = params;
-  console.log("id,", id);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -29,7 +28,7 @@ const SinglePage = () => {
       }
     };
     fetchData();
-  }, []);
+  }, [id]);
 
   const productData = products?.find((item: ProductType) => item?._id == id);
 
