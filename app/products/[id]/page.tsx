@@ -12,6 +12,7 @@ const SinglePage = () => {
   const [isLoading, setIsLoading] = useState(false);
   const params = useParams();
   const { id } = params;
+  console.log("id", id);
 
   useEffect(() => {
     const fetchData = async () => {
