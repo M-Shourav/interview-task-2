@@ -4,7 +4,6 @@ export const getData = async (endpoints: string) => {
     headers: {
       "content-type": "application/json",
     },
-    mode: "cors",
   });
   const data = await response.json();
   return data;
